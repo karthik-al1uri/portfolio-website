@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import logo from "./Logo2111.png";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -23,6 +23,8 @@ import threejs from "./tech/threejsicon.png";
 import C from "./tech/C.png";
 import django from "./tech/django.svg";
 import powerbi from "./tech/powerbi.png";
+import pyspark from "./tech/pyspark.png";
+import databricks from "./tech/databricks.png";
 
 import prahethi from "./company/Prahethi.jpg";
 import cosc from "./company/COSC.png";
@@ -34,6 +36,7 @@ import lms from "./lms.png";
 import CBIT from "./CBIT.jpg";
 import Bhashyam from "./Bhashyam.png";
 import Chaitanya from "./Chaitanya.png";
+import UCB from "./UCB.png";
 
 export {
     logo,
@@ -68,4 +71,7 @@ export {
     Bhashyam,
     Chaitanya,
     powerbi,
+    databricks,
+    pyspark,
+    UCB,
 };

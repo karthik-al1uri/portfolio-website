@@ -27,6 +27,9 @@ import {
     leaderboard,
     lms,
     powerbi,
+    databricks,
+    pyspark,
+    UCB,
 } from "../assets";
 
 export const navLinks = [
@@ -64,6 +67,17 @@ const services = [
 ];
 
 const education = [
+
+    {
+        title: "Masters in Computer Science",
+        subject: "Major: CSE",
+        //grade: "CGPA: 3.5/4",
+        company_name: "Unversity of Colorado, Boulder",
+        icon: UCB,
+        date: "2025 - present",
+    },
+
+
     {
         title: "Bachelor of Engineering",
         subject: "Major: CSE",
@@ -80,6 +94,7 @@ const education = [
         icon: Chaitanya,
         date: "2019 - 2021",
     },
+
     {
         title: "High School",
         subject: "Board: CBSE",
@@ -112,20 +127,17 @@ const technologies = [
         icon: reactjs,
     },
     {
-        name: "Next JS",
-        icon: nextjs,
+        name: "Databricks",
+        icon: databricks,
     },
     {
         name: "Tailwind CSS",
         icon: tailwind,
     },
+
     {
-        name: "Node JS",
-        icon: nodejs,
-    },
-    {
-        name: "MongoDB",
-        icon: mongodb,
+        name: "Pyspark",
+        icon: pyspark,
     },
     {
         name: "powerbi",
@@ -147,10 +159,9 @@ const technologies = [
         name: "C",
         icon: C,
     },
-    {
-        name: "django",
-        icon: django,
-    },
+
+
+
 ];
 
 const experiences = [
@@ -185,7 +196,7 @@ const experiences = [
 const testimonials = [
     {
         testimonial:
-            "I thought it was impossible to make a website as beautiful as our product, but Sai proved me wrong.",
+            "I thought it was impossible to make a website as beautiful as our product, but Karthik proved me wrong.",
         name: "Navya Matta",
         designation: "CEO",
         company: "NAYA",
