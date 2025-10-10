@@ -38,6 +38,12 @@ import Bhashyam from "./Bhashyam.png";
 import Chaitanya from "./Chaitanya.png";
 import UCB from "./UCB.png";
 
+// Company logos
+import cyient from "./cyient.webp";
+import wipro from "./Wipro.png";
+import nativearakucoffee from "./Nativearakucoffee.png";
+import enertech from "./enertech.jpg";
+
 export {
     logo,
     backend,
@@ -74,4 +80,8 @@ export {
     databricks,
     pyspark,
     UCB,
+    cyient,
+    wipro,
+    nativearakucoffee,
+    enertech,
 };
