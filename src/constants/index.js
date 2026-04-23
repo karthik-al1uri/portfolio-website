@@ -34,6 +34,10 @@ import {
     wipro,
     nativearakucoffee,
     enertech,
+    aws,
+    trailblaze,
+    documind,
+    coderefactor,
 } from "../assets";
 
 export const navLinks = [
@@ -44,6 +48,10 @@ export const navLinks = [
     {
         id: "work",
         title: "Work",
+    },
+    {
+        id: "publications",
+        title: "Publications",
     },
     {
         id: "contact",
@@ -75,8 +83,8 @@ const education = [
     {
         title: "Masters in Computer Science",
         subject: "Major: CSE",
-        //grade: "CGPA: 3.5/4",
-        company_name: "Unversity of Colorado, Boulder",
+        grade: "CGPA: 3.910/4.000",
+        company_name: "University of Colorado, Boulder",
         icon: UCB,
         date: "2025 - present",
     },
@@ -163,9 +171,10 @@ const technologies = [
         name: "C",
         icon: C,
     },
-
-
-
+    {
+        name: "AWS",
+        icon: aws,
+    },
 ];
 
 const experiences = [
@@ -260,6 +269,69 @@ const testimonials = [
 
 const projects = [
     {
+        name: "TrailBlaze AI",
+        description:
+            "AI-powered trail guidance for Colorado — combining real-time weather, live wildlife data, government trail geometry, and a conversational RAG pipeline to help hikers make smarter, safer decisions.",
+        tags: [
+            {
+                name: "python",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "RAG",
+                color: "green-text-gradient",
+            },
+            {
+                name: "LLM",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: trailblaze,
+        source_code_link: "https://github.com/karthik-al1uri/TrailBlaze-AI",
+    },
+    {
+        name: "Documind AI",
+        description:
+            "Multimodal document intelligence platform that processes PDFs and scanned images with layout-aware parsing, semantic retrieval, and grounded question answering.",
+        tags: [
+            {
+                name: "python",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "multimodal",
+                color: "green-text-gradient",
+            },
+            {
+                name: "semantic-search",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: documind,
+        source_code_link: "https://github.com/karthik-al1uri/Documind-AI",
+    },
+    {
+        name: "Automated Code Refactoring",
+        description:
+            "A multi-agent refactoring pipeline for Python codebases. It analyzes structure, detects code smells, generates a refactoring plan, applies changes via an LLM, and validates the result — all with a full audit trail.",
+        tags: [
+            {
+                name: "multi-agent",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "LLM",
+                color: "green-text-gradient",
+            },
+            {
+                name: "python",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: coderefactor,
+        source_code_link: "https://github.com/karthik-al1uri/Automated-Code-Refactoring",
+    },
+    {
         name: "COSC Hacktoberfest 2023",
         description:
             "The central hub for CBIT Hacktoberfest Hackathon 2023, offering dynamic responsiveness, captivating animations, and seamless event registration.",
@@ -280,48 +352,38 @@ const projects = [
         image: hfest23,
         source_code_link: "https://github.com/cbitosc/cbit-hacktoberfest23",
     },
+];
+
+const publications = [
     {
-        name: "CP Leaderboard",
+        title: "GAN-Driven Aerodynamic Shape Optimization",
         description:
-            "Website for tracking coding progress and rankings across platforms like LeetCode. Join the community, compete, and climb the ranks in competitive coding.",
-        tags: [
-            {
-                name: "nextjs",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "mongodb",
-                color: "green-text-gradient",
-            },
-            {
-                name: "tailwind",
-                color: "pink-text-gradient",
-            },
-        ],
-        image: leaderboard,
-        source_code_link: "https://github.com/cbitosc/LeaderBoard",
+            "Research and implementation paper on leveraging Generative Adversarial Networks for aerodynamic shape optimization, demonstrating improved design generation and performance prediction for engineering applications.",
+        link: "/publications/research-implementation-paper.pdf",
     },
     {
-        name: "Library Management",
+        title: "Survey on Deep Learning for Computational Design",
         description:
-            "A comprehensive, user-friendly library system for students, efficiently managed by librarians. This responsive website features smooth parallax scroll animations.",
-        tags: [
-            {
-                name: "django",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "sqlite",
-                color: "green-text-gradient",
-            },
-            {
-                name: "css",
-                color: "pink-text-gradient",
-            },
-        ],
-        image: lms,
-        source_code_link:
-            "https://github.com/karthik-al1uri/Library-Management-System",
+            "A comprehensive survey covering state-of-the-art deep learning techniques applied to computational design and optimization, including GANs, autoencoders, and reinforcement learning approaches.",
+        link: "/publications/survey-paper.pdf",
+    },
+];
+
+const certifications = [
+    {
+        title: "AWS Certified AI Practitioner",
+        issuer: "Amazon Web Services",
+        link: "/certifications/aws-ai-practitioner.pdf",
+    },
+    {
+        title: "CS50's Introduction to Artificial Intelligence with Python",
+        issuer: "Harvard University",
+        link: "/certifications/cs50ai.pdf",
+    },
+    {
+        title: "Infosys Certification",
+        issuer: "Infosys",
+        link: "/certifications/infosys.pdf",
     },
 ];
 
@@ -333,4 +395,6 @@ export {
     education,
     testimonials,
     projects,
+    publications,
+    certifications,
 };

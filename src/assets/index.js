@@ -25,6 +25,7 @@ import django from "./tech/django.svg";
 import powerbi from "./tech/powerbi.png";
 import pyspark from "./tech/pyspark.png";
 import databricks from "./tech/databricks.png";
+import aws from "./tech/aws.svg";
 
 import prahethi from "./company/Prahethi.jpg";
 import cosc from "./company/COSC.png";
@@ -32,6 +33,9 @@ import cosc from "./company/COSC.png";
 import hfest23 from "./hfest23.png";
 import leaderboard from "./leaderboard.png";
 import lms from "./lms.png";
+import trailblaze from "./trailblaze.svg";
+import documind from "./documind.svg";
+import coderefactor from "./coderefactor.svg";
 
 import CBIT from "./CBIT.jpg";
 import Bhashyam from "./Bhashyam.png";
@@ -84,4 +88,8 @@ export {
     wipro,
     nativearakucoffee,
     enertech,
+    aws,
+    trailblaze,
+    documind,
+    coderefactor,
 };

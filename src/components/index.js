@@ -14,6 +14,8 @@ import Feedbacks from "./Feedbacks";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
 import Education from "./Education";
+import Publications from "./Publications";
+import Certifications from "./Certifications";
 
 export {
     Hero,
@@ -30,4 +32,6 @@ export {
     BallCanvas,
     ComputersCanvas,
     StarsCanvas,
+    Publications,
+    Certifications,
 };
