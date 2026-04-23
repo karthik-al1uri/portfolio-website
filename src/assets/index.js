@@ -36,6 +36,7 @@ import lms from "./lms.png";
 import trailblaze from "./trailblaze.svg";
 import documind from "./documind.svg";
 import coderefactor from "./coderefactor.svg";
+import hacktoberfest from "./hacktoberfest.svg";
 
 import CBIT from "./CBIT.jpg";
 import Bhashyam from "./Bhashyam.png";
@@ -92,4 +93,5 @@ export {
     trailblaze,
     documind,
     coderefactor,
+    hacktoberfest,
 };

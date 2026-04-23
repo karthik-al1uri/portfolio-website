@@ -10,7 +10,7 @@ const CertificationCard = ({ index, title, issuer, date, link }) => {
     return (
         <motion.div
             variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-            className="bg-tertiary p-6 rounded-2xl sm:w-[360px] w-full"
+            className="bg-tertiary p-6 rounded-2xl sm:w-[360px] w-full flex flex-col min-h-[180px]"
         >
             <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-[#00cea8] flex items-center justify-center flex-shrink-0">

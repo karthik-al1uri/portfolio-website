@@ -38,6 +38,7 @@ import {
     trailblaze,
     documind,
     coderefactor,
+    hacktoberfest,
 } from "../assets";
 
 export const navLinks = [
@@ -349,7 +350,7 @@ const projects = [
                 color: "pink-text-gradient",
             },
         ],
-        image: hfest23,
+        image: hacktoberfest,
         source_code_link: "https://github.com/cbitosc/cbit-hacktoberfest23",
     },
 ];
@@ -366,6 +367,12 @@ const publications = [
         description:
             "A comprehensive survey covering state-of-the-art deep learning techniques applied to computational design and optimization, including GANs, autoencoders, and reinforcement learning approaches.",
         link: "/publications/survey-paper.pdf",
+    },
+    {
+        title: "LCR Circuit Analysis and Optimization",
+        description:
+            "Research paper exploring advanced analysis techniques for LCR circuits, covering simulation methodologies, optimization strategies, and practical engineering applications.",
+        link: "/publications/lcr-paper.pdf",
     },
 ];
 
