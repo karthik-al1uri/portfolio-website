@@ -44,7 +44,7 @@ import Chaitanya from "./Chaitanya.png";
 import UCB from "./UCB.png";
 
 // Company logos
-import cyient from "./cyient.webp";
+import vedainfo from "./Veda-info.png";
 import wipro from "./Wipro.png";
 import nativearakucoffee from "./Nativearakucoffee.png";
 import enertech from "./enertech.jpg";
@@ -85,7 +85,7 @@ export {
     databricks,
     pyspark,
     UCB,
-    cyient,
+    vedainfo,
     wipro,
     nativearakucoffee,
     enertech,

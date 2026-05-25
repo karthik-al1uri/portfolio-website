@@ -30,7 +30,7 @@ import {
     databricks,
     pyspark,
     UCB,
-    cyient,
+    vedainfo,
     wipro,
     nativearakucoffee,
     enertech,
@@ -120,6 +120,18 @@ const education = [
 
 const technologies = [
     {
+        name: "Python",
+        icon: python,
+    },
+    {
+        name: "JavaScript",
+        icon: javascript,
+    },
+    {
+        name: "C",
+        icon: C,
+    },
+    {
         name: "HTML 5",
         icon: html,
     },
@@ -128,53 +140,32 @@ const technologies = [
         icon: css,
     },
     {
-        name: "JavaScript",
-        icon: javascript,
-    },
-    // {
-    //     name: "TypeScript",
-    //     icon: typescript,
-    // },
-    {
         name: "React JS",
         icon: reactjs,
+    },
+    {
+        name: "Next.js",
+        icon: nextjs,
+    },
+    {
+        name: "AWS",
+        icon: aws,
     },
     {
         name: "Databricks",
         icon: databricks,
     },
     {
-        name: "Tailwind CSS",
-        icon: tailwind,
-    },
-
-    {
-        name: "Pyspark",
+        name: "PySpark",
         icon: pyspark,
     },
     {
-        name: "powerbi",
+        name: "Power BI",
         icon: powerbi,
     },
     {
         name: "git",
         icon: git,
-    },
-    {
-        name: "figma",
-        icon: figma,
-    },
-    {
-        name: "python",
-        icon: python,
-    },
-    {
-        name: "C",
-        icon: C,
-    },
-    {
-        name: "AWS",
-        icon: aws,
     },
 ];
 
@@ -209,14 +200,25 @@ const experiences = [
 
 const workExperiences = [
     {
-        title: "Machine Learning Intern",
-        company_name: "Cyient",
-        icon: cyient,
+        title: "Graduate Research Assistant",
+        company_name: "University of Colorado Boulder",
+        icon: UCB,
         iconBg: "#FFFFFF",
-        date: "Jan 2025 – Apr 2025 · Hyderabad",
+        date: "Jan 2026 – May 2026 · Boulder, CO",
         points: [
-            "Built an intelligent document search assistant using Gemini API and FAISS to enable semantic discovery across thousands of documents.",
-            "Engineered a custom embedding pipeline and optimized FAISS indexing, reducing median query latency to <200 ms and improving top-3 precision.",
+            "Architected a multi-agent RAG system using LangGraph and FAISS with self-correction loops for automated legacy code refactoring, achieving a 92% compilation success rate.",
+            "Engineered FAISS-based dense retrievers reducing LLM hallucinations by 35% and cyclomatic complexity by 25% via Claude-powered refactoring pipelines.",
+        ],
+    },
+    {
+        title: "Machine Learning Intern",
+        company_name: "Vedainfo",
+        icon: vedainfo,
+        iconBg: "#FFFFFF",
+        date: "Mar 2023 – Jun 2023 · Hyderabad, India",
+        points: [
+            "Built a FAISS-powered semantic search assistant over legal document corpora, improving retrieval precision from 60% to 71%.",
+            "Optimized the embedding pipeline and FAISS indexing to achieve sub-200ms query response times across thousands of documents.",
         ],
     },
     {
@@ -357,21 +359,27 @@ const projects = [
 
 const publications = [
     {
-        title: "GAN-Driven Aerodynamic Shape Optimization",
+        title: "Human-in-the-Loop Legacy Code Refactoring with RAG-Grounded Hallucination Analysis",
         description:
-            "Research and implementation paper on leveraging Generative Adversarial Networks for aerodynamic shape optimization, demonstrating improved design generation and performance prediction for engineering applications.",
+            "Under review, 2026. Published via University of Colorado, Boulder. Presents a multi-agent RAG pipeline with self-correction loops and hallucination analysis for automated legacy code refactoring.",
         link: "/publications/research-implementation-paper.pdf",
     },
     {
-        title: "Survey on Deep Learning for Computational Design",
+        title: "Aerodynamic Shape Optimization with GAN-Driven 3D Model Generation",
         description:
-            "A comprehensive survey covering state-of-the-art deep learning techniques applied to computational design and optimization, including GANs, autoencoders, and reinforcement learning approaches.",
+            "International Journal of Computing, 2024. Leverages Generative Adversarial Networks for aerodynamic shape optimization, demonstrating improved 3D design generation and performance prediction.",
+        link: "/publications/research-implementation-paper.pdf",
+    },
+    {
+        title: "Automated Aerodynamic Shape Optimization through GAN-Driven 3D Model Generation",
+        description:
+            "Presented at the 'Driving Innovation by Dynamic Optimization' conference, 2026. Explores GAN-driven shape generation for engineering design optimization.",
         link: "/publications/survey-paper.pdf",
     },
     {
-        title: "LCR Circuit Analysis and Optimization",
+        title: "Automated Aerodynamic Shape Optimization through GAN-Driven 3D Model Generation",
         description:
-            "Research paper exploring advanced analysis techniques for LCR circuits, covering simulation methodologies, optimization strategies, and practical engineering applications.",
+            "Accepted at University of Bahrain proceedings, 2026. Co-authored with GK Kumar, MSK Goud, TP Vital, and R Rakhee.",
         link: "/publications/lcr-paper.pdf",
     },
 ];
@@ -388,8 +396,8 @@ const certifications = [
         link: "/certifications/cs50ai.pdf",
     },
     {
-        title: "Infosys Certification",
-        issuer: "Infosys",
+        title: "Google Cybersecurity Certificate",
+        issuer: "Google",
         link: "/certifications/infosys.pdf",
     },
 ];

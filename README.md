@@ -17,7 +17,7 @@
 
 ## 🧠 About Me
 
-Aspiring ML and Data Science engineer with hands-on experience in building intelligent systems and optimizing AI workflows. My experience includes developing a semantic document search assistant at **Cyient**, creating an AI-powered diagnostic platform at **Wipro**, and publishing research on GAN-driven aerodynamic shape optimization. I'm excited to apply my technical expertise to solve real-world challenges.
+Aspiring ML and Data Science engineer with hands-on experience in building intelligent systems and optimizing AI workflows. My experience includes developing a semantic search assistant over legal document corpora at **Vedainfo**, creating an AI-powered diagnostic platform at **Wipro**, and publishing research on GAN-driven aerodynamic shape optimization. I'm excited to apply my technical expertise to solve real-world challenges.
 
 ---
 
@@ -48,7 +48,8 @@ Aspiring ML and Data Science engineer with hands-on experience in building intel
 
 | Role | Company | Period |
 |------|---------|--------|
-| **Machine Learning Intern** | Cyient | Jan 2025 – Apr 2025 |
+| **Graduate Research Assistant** | University of Colorado Boulder | Jan 2026 – May 2026 |
+| **Machine Learning Intern** | Vedainfo | Mar 2023 – Jun 2023 |
 | **Technical Intern** | Wipro | Jun 2024 – Aug 2024 |
 | **Software Engineer Intern** | Enertech | Feb 2024 – Apr 2024 |
 | **Web Developer Intern** | Native Araku Coffee | Jun 2023 – Sep 2023 |

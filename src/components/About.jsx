@@ -43,7 +43,7 @@ const About = () => {
                 className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
             >
                 Aspiring ML and Data Science engineer with hands-on experience in building intelligent systems and 
-                optimizing AI workflows. My experience includes developing a semantic document search assistant at Cyient, 
+                optimizing AI workflows. My experience includes developing a semantic search assistant over legal document corpora at Vedainfo, 
                 creating an AI-powered diagnostic platform at Wipro, and publishing research on 
                 GAN-driven aerodynamic shape optimization. 
                 I am proficient in a range of technologies including Python, LangChain, React, Databricks, and PowerBI ,  
