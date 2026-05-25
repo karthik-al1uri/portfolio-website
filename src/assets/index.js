@@ -26,6 +26,10 @@ import powerbi from "./tech/powerbi.png";
 import pyspark from "./tech/pyspark.png";
 import databricks from "./tech/databricks.png";
 import aws from "./tech/aws.svg";
+import pytorch from "./tech/pytorch.svg";
+import tensorflow from "./tech/tensorflow.svg";
+import docker from "./tech/docker-icon.svg";
+import fastapi from "./tech/fastapi.svg";
 
 import prahethi from "./company/Prahethi.jpg";
 import cosc from "./company/COSC.png";
@@ -90,6 +94,10 @@ export {
     nativearakucoffee,
     enertech,
     aws,
+    pytorch,
+    tensorflow,
+    docker,
+    fastapi,
     trailblaze,
     documind,
     coderefactor,

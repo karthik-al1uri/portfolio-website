@@ -35,6 +35,10 @@ import {
     nativearakucoffee,
     enertech,
     aws,
+    pytorch,
+    tensorflow,
+    docker,
+    fastapi,
     trailblaze,
     documind,
     coderefactor,
@@ -119,54 +123,20 @@ const education = [
 ];
 
 const technologies = [
-    {
-        name: "Python",
-        icon: python,
-    },
-    {
-        name: "JavaScript",
-        icon: javascript,
-    },
-    {
-        name: "C",
-        icon: C,
-    },
-    {
-        name: "HTML 5",
-        icon: html,
-    },
-    {
-        name: "CSS 3",
-        icon: css,
-    },
-    {
-        name: "React JS",
-        icon: reactjs,
-    },
-    {
-        name: "Next.js",
-        icon: nextjs,
-    },
-    {
-        name: "AWS",
-        icon: aws,
-    },
-    {
-        name: "Databricks",
-        icon: databricks,
-    },
-    {
-        name: "PySpark",
-        icon: pyspark,
-    },
-    {
-        name: "Power BI",
-        icon: powerbi,
-    },
-    {
-        name: "git",
-        icon: git,
-    },
+    { name: "Python", icon: python },
+    { name: "JavaScript", icon: javascript },
+    { name: "C", icon: C },
+    { name: "HTML 5", icon: html },
+    { name: "CSS 3", icon: css },
+    { name: "PyTorch", icon: pytorch },
+    { name: "TensorFlow", icon: tensorflow },
+    { name: "React JS", icon: reactjs },
+    { name: "Next.js", icon: nextjs },
+    { name: "FastAPI", icon: fastapi },
+    { name: "Docker", icon: docker },
+    { name: "AWS", icon: aws },
+    { name: "Power BI", icon: powerbi },
+    { name: "git", icon: git },
 ];
 
 const experiences = [
@@ -206,8 +176,30 @@ const workExperiences = [
         iconBg: "#FFFFFF",
         date: "Jan 2026 – May 2026 · Boulder, CO",
         points: [
-            "Architected a multi-agent RAG system using LangGraph and FAISS with self-correction loops for automated legacy code refactoring, achieving a 92% compilation success rate.",
-            "Engineered FAISS-based dense retrievers reducing LLM hallucinations by 35% and cyclomatic complexity by 25% via Claude-powered refactoring pipelines.",
+            "Achieved 92% code compilation success rate by architecting a multi-agent RAG system using LangGraph and FAISS with self-correction loops for automated legacy code refactoring.",
+            "Engineered FAISS-based dense retrievers reducing LLM hallucinations by 35% and cyclomatic complexity by 25% via Claude-powered refactoring pipelines; authored Human-in-the-Loop Legacy Code Refactoring with RAG-Grounded Hallucination Analysis (under review, 2026).",
+        ],
+    },
+    {
+        title: "Generative AI Developer",
+        company_name: "Wipro",
+        icon: wipro,
+        iconBg: "#FFFFFF",
+        date: "Aug 2024 – May 2025 · Hyderabad, India",
+        points: [
+            "Reduced physician documentation time by 90% by architecting an AI-powered diagnostic platform, cutting daily workload from several hours to under 15 minutes per physician.",
+            "Built FastAPI and TensorFlow real-time inference workflows improving diagnostic throughput for 10+ clinicians across 3 hospital departments.",
+        ],
+    },
+    {
+        title: "Software Development Intern",
+        company_name: "Enertech Comnet Pvt Ltd",
+        icon: enertech,
+        iconBg: "#FFFFFF",
+        date: "Aug 2023 – Nov 2023 · Hyderabad, India",
+        points: [
+            "Improved UI responsiveness by 25% by leading front-end development of Version 2.0 and integrating new components with backend REST APIs.",
+            "Built reusable component architecture that improved codebase maintainability and reduced onboarding time for new feature development.",
         ],
     },
     {
@@ -217,44 +209,8 @@ const workExperiences = [
         iconBg: "#FFFFFF",
         date: "Mar 2023 – Jun 2023 · Hyderabad, India",
         points: [
-            "Built a FAISS-powered semantic search assistant over legal document corpora, improving retrieval precision from 60% to 71%.",
-            "Optimized the embedding pipeline and FAISS indexing to achieve sub-200ms query response times across thousands of documents.",
-        ],
-    },
-    {
-        title: "Technical Intern",
-        company_name: "Wipro",
-        icon: wipro,
-        iconBg: "#FFFFFF",
-        date: "Jun 2024 – Aug 2024 · Hyderabad",
-        points: [
-            "Built an AI-powered diagnostic platform to manage patient records and generate recommendations with auditable summaries.",
-            "Automated clinical note-taking, reducing documentation time per physician from ~2 hours to ~20 minutes.",
-            "Applied real-time data pipelines and ML models to improve recommendation accuracy and user trust.",
-        ],
-    },
-    {
-        title: "Software Engineer Intern",
-        company_name: "Enertech",
-        icon: enertech,
-        iconBg: "#FFFFFF",
-        date: "Feb 2024 – Apr 2024",
-        points: [
-            "Built a real-time telemetry dashboard for energy devices using React and WebSockets, reducing incident triage time by ~40%.",
-            "Implemented a data ingestion pipeline (Python + SQL) with batching and indexing that cut query times by ~60% and lowered storage costs.",
-            "Set up CI/CD with automated tests and previews, shrinking release cycles from ~30 minutes to ~5 minutes per deploy.",
-        ],
-    },
-    {
-        title: "Web Developer Intern",
-        company_name: "Native Araku Coffee Pvt. Ltd.",
-        icon: nativearakucoffee,
-        iconBg: "#FFFFFF",
-        date: "Jun 2023 – Sep 2023 · Hyderabad",
-        points: [
-            "Developed a responsive React web platform backed by Python APIs and SQL to modernize the company’s digital presence.",
-            "Implemented UX improvements that increased product page engagement and reduced bounce on mobile.",
-            "Optimized queries and asset delivery, improving key page load time and Lighthouse performance scores.",
+            "Improved retrieval precision from 60% to 71% by building a FAISS-powered semantic search assistant over large legal document corpora, enabling analysts to surface relevant clauses via natural language queries.",
+            "Achieved consistent sub-200ms query response times through optimized FAISS indexing, making the system viable for real-time analyst workflows at scale.",
         ],
     },
 ];
@@ -274,41 +230,36 @@ const projects = [
     {
         name: "TrailBlaze AI",
         description:
-            "AI-powered trail guidance for Colorado — combining real-time weather, live wildlife data, government trail geometry, and a conversational RAG pipeline to help hikers make smarter, safer decisions.",
+            "Production RAG platform deployed to 10+ real users — integrating 5,600+ Colorado trails into a 4-agent LangGraph pipeline with real-time weather, wildlife data, interactive Leaflet maps, and GPX export. Deployed on AWS ECS Fargate via GitHub Actions CI/CD.",
         tags: [
-            {
-                name: "python",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "RAG",
-                color: "green-text-gradient",
-            },
-            {
-                name: "LLM",
-                color: "pink-text-gradient",
-            },
+            { name: "LangGraph", color: "blue-text-gradient" },
+            { name: "FastAPI", color: "green-text-gradient" },
+            { name: "AWS-ECS", color: "pink-text-gradient" },
         ],
         image: trailblaze,
         source_code_link: "https://github.com/karthik-al1uri/TrailBlaze-AI",
+        live_link: "https://trail-blaze-ai.vercel.app",
+    },
+    {
+        name: "Aerodynamic Shape Optimization",
+        description:
+            "GAN-based 3D generation pipeline that reduced design iteration time by 40% and improved aerodynamic accuracy by 15% with 12% drag reduction via real-time CFD simulations. Published in 3 venues: IJC 2024, DI-DO conference 2026, and University of Bahrain 2026.",
+        tags: [
+            { name: "PyTorch", color: "blue-text-gradient" },
+            { name: "GANs", color: "green-text-gradient" },
+            { name: "CFD", color: "pink-text-gradient" },
+        ],
+        image: coderefactor,
+        source_code_link: "https://github.com/karthik-al1uri",
     },
     {
         name: "Documind AI",
         description:
-            "Multimodal document intelligence platform that processes PDFs and scanned images with layout-aware parsing, semantic retrieval, and grounded question answering.",
+            "Multimodal document intelligence platform that processes PDFs and scanned images with layout-aware parsing, semantic retrieval via FAISS, and grounded question answering using RAG pipelines.",
         tags: [
-            {
-                name: "python",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "multimodal",
-                color: "green-text-gradient",
-            },
-            {
-                name: "semantic-search",
-                color: "pink-text-gradient",
-            },
+            { name: "python", color: "blue-text-gradient" },
+            { name: "FAISS", color: "green-text-gradient" },
+            { name: "multimodal", color: "pink-text-gradient" },
         ],
         image: documind,
         source_code_link: "https://github.com/karthik-al1uri/Documind-AI",
@@ -316,44 +267,14 @@ const projects = [
     {
         name: "Automated Code Refactoring",
         description:
-            "A multi-agent refactoring pipeline for Python codebases. It analyzes structure, detects code smells, generates a refactoring plan, applies changes via an LLM, and validates the result — all with a full audit trail.",
+            "Multi-agent LLM pipeline that analyzes Python codebases, detects code smells, generates refactoring plans, applies changes via Claude, and validates results — achieving 92% compilation success with a full audit trail.",
         tags: [
-            {
-                name: "multi-agent",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "LLM",
-                color: "green-text-gradient",
-            },
-            {
-                name: "python",
-                color: "pink-text-gradient",
-            },
-        ],
-        image: coderefactor,
-        source_code_link: "https://github.com/karthik-al1uri/Automated-Code-Refactoring",
-    },
-    {
-        name: "COSC Hacktoberfest 2023",
-        description:
-            "The central hub for CBIT Hacktoberfest Hackathon 2023, offering dynamic responsiveness, captivating animations, and seamless event registration.",
-        tags: [
-            {
-                name: "nextjs",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "gsap",
-                color: "green-text-gradient",
-            },
-            {
-                name: "tailwind",
-                color: "pink-text-gradient",
-            },
+            { name: "LangGraph", color: "blue-text-gradient" },
+            { name: "RAG", color: "green-text-gradient" },
+            { name: "Claude", color: "pink-text-gradient" },
         ],
         image: hacktoberfest,
-        source_code_link: "https://github.com/cbitosc/cbit-hacktoberfest23",
+        source_code_link: "https://github.com/karthik-al1uri/Automated-Code-Refactoring",
     },
 ];
 

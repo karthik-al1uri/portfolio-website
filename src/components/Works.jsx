@@ -15,23 +15,36 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  live_link,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full flex flex-col min-h-[520px]'
+        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full flex flex-col min-h-[480px]'
       >
-        <div className='relative w-full h-[230px]'>
+        <div className='relative w-full h-[200px]'>
           <img
             src={image}
             alt='project_image'
             className='w-full h-full object-cover rounded-2xl'
           />
 
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+          <div className='absolute inset-0 flex justify-end m-3 gap-2 card-img_hover'>
+            {live_link && (
+              <div
+                onClick={() => window.open(live_link, "_blank")}
+                className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+                title='Live Demo'
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </div>
+            )}
             <div
               onClick={() => window.open(source_code_link, "_blank")}
               className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+              title='Source Code'
             >
               <img
                 src={github}
@@ -43,15 +56,15 @@ const ProjectCard = ({
         </div>
 
         <div className='mt-5 flex-grow'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+          <h3 className='text-white font-bold text-[22px]'>{name}</h3>
+          <p className='mt-2 text-secondary text-[13px] leading-[22px]'>{description}</p>
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>
           {tags.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
+              className={`text-[13px] font-medium ${tag.color}`}
             >
               #{tag.name}
             </p>
