@@ -1,8 +1,22 @@
-import React, { Suspense } from "react";
+import React, { Suspense, Component } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
+
+class WebGLErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+  render() {
+    if (this.state.hasError) return null;
+    return this.props.children;
+  }
+}
 
 const Earth = () => {
   const earth = useGLTF("/planet/scene.gltf");
@@ -41,4 +55,10 @@ const EarthCanvas = () => {
   );
 };
 
-export default EarthCanvas;
+const EarthCanvasWithBoundary = () => (
+  <WebGLErrorBoundary>
+    <EarthCanvas />
+  </WebGLErrorBoundary>
+);
+
+export default EarthCanvasWithBoundary;

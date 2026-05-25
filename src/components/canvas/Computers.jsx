@@ -1,8 +1,22 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState, Component } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
+
+class WebGLErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+  render() {
+    if (this.state.hasError) return null;
+    return this.props.children;
+  }
+}
 
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("/desktop_pc/scene.gltf");
@@ -75,4 +89,10 @@ const ComputersCanvas = () => {
   );
 };
 
-export default ComputersCanvas;
+const ComputersCanvasWithBoundary = () => (
+  <WebGLErrorBoundary>
+    <ComputersCanvas />
+  </WebGLErrorBoundary>
+);
+
+export default ComputersCanvasWithBoundary;

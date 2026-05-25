@@ -1,4 +1,4 @@
-import { useState, useRef, Suspense } from "react";
+import { useState, useRef, Suspense, Component } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
@@ -27,7 +27,21 @@ const Stars = (props) => {
   );
 };
 
-const StarsCanvas = () => {
+class WebGLErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+  render() {
+    if (this.state.hasError) return null;
+    return this.props.children;
+  }
+}
+
+const StarsCanvasInner = () => {
   return (
     <div className='w-full h-auto absolute inset-0 z-[-1]'>
       <Canvas camera={{ position: [0, 0, 1] }}>
@@ -40,5 +54,11 @@ const StarsCanvas = () => {
     </div>
   );
 };
+
+const StarsCanvas = () => (
+  <WebGLErrorBoundary>
+    <StarsCanvasInner />
+  </WebGLErrorBoundary>
+);
 
 export default StarsCanvas;
